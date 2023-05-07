@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "footer";
+@import "variables";
+@import "header";
+@import "mixins";
+@import "media";
+
+@font-face {
+    /* una esta fuente es para el header*/
+    font-family: MarcellusSc-Regular;
+    src: url(../fonts/MarcellusSC-Regular.ttf);
+}
+
+@font-face {
+    font-family: Cinzel;
+    src: url(../fonts/Cinzel.ttf);
+}
+
+/*estas fuentes son para el resto de la pagina combinando sus variantes*/
+@font-face {
+    font-family: Roboto-Italic;
+    src: url(../fonts/Roboto-Italic.ttf);
+}
+
+@font-face {
+    font-family: Roboto-LightItalic;
+    src: url(../fonts/Roboto-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+body {
+    background-color: map-get($map: $colores, $key:septimo);
+    width: auto;
+    font-family: Roboto-Regular;
+
+    nav {
+        font-family: Roboto-Regular;
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h3 {
+        font-family: Roboto-Regular;
+        margin: 2%;
+    }
+
+    main {
+        font-family: Roboto-Regular;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+
+    h4 {
+        display: block;
+    }
+
+    .whatsapp {
+        position: relative;
+    }
+
+    .boton {
+        @include sizes (80px,80px);
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        border-radius: 50px;
+
+    }
+
+
+    .titulo {
+        margin-top: 40px;
+        border-bottom: #b1e2f4 6px solid;
+    }
+
+
+    .slider {
+        padding: 2%;
+        width: 95%;
+        margin: auto;
+        overflow: hidden;
+
+        ul {
+            width: 300%;
+            display: flex;
+            padding: 0;
+            animation: cambio 10s infinite;
+            animation-direction: alternate;
+        }
+
+        li {
+            width: 100%;
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @keyframes cambio {
+        0% {
+            margin-left: 0;
+        }
+
+        30% {
+            margin-left: 0;
+        }
+
+        35% {
+            margin-left: -100%;
+        }
+
+        65% {
+            margin-left: -100%;
+        }
+
+        70% {
+            margin-left: -200%;
+        }
+
+        100% {
+            margin-left: -200%;
+        }
+    }
+
+
+    .link {
+        text-decoration: none;
+
+        .cambio {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 100px;
+            align-items: center;
+
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #b1e2f4;
+                margin-top: 20px;
+                text-align: center;
+                @include sizes (100%,80%);
+
+
+                p {
+                    padding-top: 15px;
+                }
+
+                h5 {
+                    color: #0b6aaa;
+                }
+            }
+        }
+    }
+
+    .ofert {
+        .gird {
+            margin-top: 30px;
+            display: grid;
+            grid-template-areas:
+                "posi1 posi2 "
+            ;
+
+            .posi1 {
+                padding-left: 13%;
+                grid-area: posi1;
+
+                a {
+                    transition: all 5s;
+                }
+        
+                a :hover {
+                    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+        
+                }
+
+
+            }
+
+            .posi2 {
+                padding-right: 7%;
+                grid-area: posi2;
+                display: grid;
+                grid-template-areas:
+                    "ofer2 ofer3"
+                    "ofer4 ofer5";
+
+                .photo {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+
+                h5 {
+                    text-align: center;
+                }
+
+                h6 {
+                    padding-top: 5px;
+                    text-align: center;
+                }
+            }
+
+        }
+
+    }
+
+    .posi4 {
+        display: flex;
+        justify-content: space-evenly;
+        display: grid;
+        grid-template-areas:
+            "ofer7 ofer8"
+            "ofer9 ofer10"
+            "ofer11 ofer12";
+
+
+        div {
+            padding-top: 20px;
+
+            a {
+                transition: all 5s;
+            }
+
+            a :hover {
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+            }
+
+        }
+    }
+
+    .completa {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        a {
+            transition: all 5s;
+        }
+
+        a :hover {
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+        }
+    }
+
+
+
+
+
+
+    // Cards
+
+    .containerr {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+
+        .card {
+            @include sizes (330px,430px);
+            background-color: #d7ecfa;
+            border-radius: 8px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            text-align: center;
+            transition: all 0.25s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 60%;
+            }
+
+            h4 {
+                font-weight: 600;
+                background-color: #80d3f2;
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            p {
+                padding: 0 1rem;
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            a {
+                margin-bottom: 10px;
+                font-weight: 500;
+                text-decoration: none;
+                color: #3498db;
+            }
+
+            button {
+                background-color: aqua;
+                border-radius: 5px;
+                border-color: aquamarine;
+
+
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+        }
+
+    }
+
+
+    .comprass {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        background-color: #80d3f2;
+        font-size: 150%;
+        padding-left: 20px;
+        margin-top: 40px;
+
+    }
+
+    .contacto {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .inputContainer {
+            width: 100%;
+        }
+
+
+        .btn {
+            background-color: #80d3f2;
+            margin: 2px;
+        }
+
+        .caja {
+            background-color: #80d3f2;
+        }
+
+        .terminos {
+            margin-top: 1%;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+        }
+    }
+
+
+
+    .promos {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        .promosBanco {
+            @include sizes (16%,100%);
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            text-align: center;
+        }
+
+        img {
+            margin-top: 20px;
+        }
+
+        h4 {
+            margin-top: 30px;
+        }
+
+        .promo3 {
+            width: 50px;
+        }
+    }
+
+}

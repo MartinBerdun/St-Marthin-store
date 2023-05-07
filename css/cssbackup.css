@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    /* una esta fuente es para el header*/
+    font-family: MarcellusSc-Regular;
+    src: url(../fonts/MarcellusSC-Regular.ttf);
+}
+
+@font-face {
+    font-family: Cinzel;
+    src: url(../fonts/Cinzel.ttf);
+
+}
+
+/*estas fuentes son para el resto de la pagina combinando sus variantes*/
+@font-face {
+    font-family: Roboto-Italic;
+    src: url(../fonts/Roboto-Italic.ttf);
+}
+
+@font-face {
+    font-family: Roboto-LightItalic;
+    src: url(../fonts/Roboto-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+
+/* Empiezo con los estilos de las paginas*/
+/*********************** PROPIEDADES DEL ENCABEZADO DE TODAS LAS PAGINAS  (header) del index*/
+
+.primerSeccion {
+    background-color: #C4DCE9;
+    background-image: linear-gradient(to bottom, white, #C4DCE9);
+    width: auto;
+}
+
+.encabezado {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado h1 {
+    color: #004E64;
+    font-size: 400%;
+    font-family: Cinzel;
+    margin-left: 20%;
+}
+
+.encabezado h2 {
+    font-family: Cinzel;
+}
+
+.logo {
+    width: auto;
+    padding: 30px 30px 30px 30px;
+
+}
+
+.oferta {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto-Regular;
+    font-size: 1.5rem;
+
+}
+
+.oferta div {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: heartBeat;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+/* menu que se encuentra arriba a la derecha */
+.menu {
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu li {
+    display: inline;
+    /* justify-content: center;
+    align-items: center; */
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    font-family: Roboto-Regular;
+}
+
+
+/* menu debajo del header */
+.menuPrincipal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menuprincipal {
+    padding: 20px;
+    text-align: center;
+}
+
+.menuprincipal li {
+    display: inline;
+    padding: 10px;
+    margin: 5px 5px 5px 5px;
+    border: 2px solid #A9D3FF;
+    /* transition: all 2s; */
+}
+
+.menuprincipal :hover {
+
+    border-radius: 5px;
+    /* border-top: none;
+    border-left: none; */
+    background-image: linear-gradient(to left, white, #C4DCE9);
+}
+
+
+/* *****************sliderrr */
+.slider {
+    padding: 2%;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul {
+    width: 300%;
+    display: flex;
+    padding: 0;
+    animation: cambio 10s infinite;
+    animation-direction: alternate;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 100%;
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: -200%;
+    }
+
+}
+
+/* fotos debajop del slider */
+.fotos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2%;
+    object-fit: cover;
+}
+
+.foto {
+    width: 250px;
+    height: 250px;
+}
+
+.foto:hover {
+    border-radius: 30px;
+    box-shadow: 2px 2px 20px 20px rgba(240, 231, 216, 0.70);
+}
+
+.fotos p {
+    font-family: Roboto-Regular;
+    display: block;
+    text-align: center;
+}
+
+.lista {
+    margin: 2%;
+    padding-left: 2%;
+}
+
+.texto {
+    margin: 20px;
+}
+
+.contacto {
+    margin: 20px;
+}
+
+.contacto1 {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.contactoItem {
+    margin: 5px;
+}
+
+.comentarios {
+    margin: 20px;
+}
+
+.terminos {
+    margin: 20px;
+}
+
+.inputs {
+    margin: 20px;
+}
+
+
+h3 {
+    font-family: Roboto-Italic;
+    margin: 2%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #EFE9EC;
+    height: auto;
+}
+
+main {
+    font-family: Roboto-Regular;
+    text-align: left;
+    line-height: 1.5;
+}
+
+nav {
+    font-family: Roboto-Regular;
+
+}
+
+/* FOOTER DE TODAS LAS PAGINAS */
+
+
+footer {
+    background-color: #C4DCE9;
+    background-image: linear-gradient(to bottom, white, #C4DCE9);
+    font-family: Roboto-Regular;
+    display: grid;
+    grid-template-areas:
+        "pagos redes"
+        "derechos derechos";
+}
+
+.pagos {
+    grid-area: pagos;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes {
+    grid-area: redes;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.derechos {
+    background-color: #EFE9EC;
+    width: 100%;
+    /* margin: 10px; */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    grid-area: derechos;
+}
+
+.iconos img {
+    padding: 10px;
+}
+
+.iconos img:hover {
+    transform: scale(1.25) translatey(-20px);
+}
+
+
+/* grid de productos */
+
+.container {
+    max-width: 1000px;
+    /* padding: 1rem; es una medida relativa al elemento raiz, es decir el html */
+    padding: 1rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    gap: 10px;
+}
+
+
+.prod {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.foto5 {
+    grid-row: 1/3;
+}
+
+.foto3 {
+    grid-column: 2/4;
+}
+
+.foto2 {
+    grid-column: 3/5;
+}
+
+.foto8 {
+    grid-column: 3/5;
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+        width: auto;
+    }
+
+    .primerSeccion {
+        width: auto;
+    }
+
+    .primerSeccion nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .encabezado {
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .encabezado h1 {
+        font-size: 200%;
+        margin-left: 5px;
+    }
+
+    .encabezado h2 {
+        font-size: 90%;
+        text-align: center;
+    }
+
+    .logo {
+        height: 40%;
+        width: 40%;
+    }
+
+    .menuprincipal {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .menuprincipal li {
+        height: 80%;
+        /* align-items: center; */
+    }
+
+    footer {
+        display: grid;
+        grid-template-areas: "pagos"
+            "redes"
+            "derechos";
+    }
+
+    .pagos {
+        grid-area: pagos;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redes {
+        grid-area: redes;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .derechos {
+        background-color: #EFE9EC;
+        width: 100%;
+        /* margin: 10px; */
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        grid-area: derechos;
+    }
+
+    .lista {
+        margin: 30px;
+        text-align: justify;
+    }
+
+    .texto {
+        margin: 30px;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    /* .contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    .contactoItem {
+        margin: 5px;
+    }
+
+    .contacto1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .comentarios {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}

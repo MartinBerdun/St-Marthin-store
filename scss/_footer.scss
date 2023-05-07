@@ -1,0 +1,80 @@
+@import "variables";
+@import "mixins";
+
+footer {
+    height: auto;
+    background-color: #bae2f6;
+    font-family: Roboto-Regular;
+    display: grid;
+    grid-template-areas:
+        "pagos redes"
+        "newslatter newslatter"
+        "derechos derechos";
+
+    .pagos {
+        height: 130px;
+        grid-area: pagos;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .iconoss  {
+            padding: 20px;
+
+            & :hover {
+                transform: scale(1.25);
+            }
+        }
+    }
+
+    .redes {
+        height: 130px;
+        grid-area: redes;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .iconos a {
+            padding: 10px;
+
+            & :hover {
+                transform: scale(1.25);
+            }
+        }
+    }
+
+    .newslatter {
+        width: 100%;
+        height: 100px;
+        grid-area: newslatter;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .news {
+            background-color: #80d3f2;
+            height: 50%;
+            margin-right: 5px;
+            border: 3px solid #80d3f2;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .inputNews {
+            @extend .news 
+        }
+
+        h5 {
+            margin-right: 20px;
+        }
+    }
+
+    .derechos {
+        background-color: #EFE9EC;
+        @include sizes (100%,40px);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        grid-area: derechos;
+    }
+}

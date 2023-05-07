@@ -1,0 +1,55 @@
+[{
+    "id": 1,
+    "nombre": "Campera",
+    "precioUn": 2000,
+    "img": "../img/buzo2.webp"
+},
+{
+    "id": 2,
+    "nombre": "Jean Negro",
+    "precioUn": 2500,
+    "img": "../img/jean3.webp"
+},
+{
+    "id": 3,
+    "nombre": "Remera",
+    "precioUn": 1500,
+    "img": "../img/reme1.webp"
+},
+{
+    "id": 4,
+    "nombre": "Zapatilla",
+    "precioUn": 4500,
+    "img": "../img/zapa1.webp"
+},
+{
+    "id": 5,
+    "nombre": "Anteojos",
+    "precioUn": 2400,
+    "img": "../img/ante1.webp"
+},
+{
+    "id": 6,
+    "nombre": "Accesorios",
+    "precioUn": 3500,
+    "img": "../img/reloj1.webp"
+},
+{
+    "id": 7,
+    "nombre": "Belleza",
+    "precioUn": 12500,
+    "img": "../img/perf1.webp"
+},
+{
+    "id": 8,
+    "nombre": "Gorra",
+    "precioUn": 2500,
+    "img": "../img/gorra1.webp"
+},
+{
+    "id": 9,
+    "nombre": "Chomba",
+    "precioUn": 6500,
+    "img": "../img/chomba1.webp"
+}
+]

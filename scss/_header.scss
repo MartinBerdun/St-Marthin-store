@@ -1,0 +1,101 @@
+
+@import "variables";
+@import "mixins";
+
+
+
+.primerSeccion {
+    background-color: #bae2f6;
+    width: auto;
+
+    .encabezado {
+        @include sizes (auto,auto);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: #004E64;
+            font-size: 400%;
+            font-family: Cinzel;
+            margin-left: 20%;
+        }
+
+        h2 {
+            font-family: Cinzel;
+        }
+    }
+
+    .logo {
+        width: auto;
+        padding: 30px 30px 30px 30px;
+    
+    }
+
+    .oferta {
+        @include sizes (100%,50px);
+        display: flex;
+        padding-top: 10px;
+        justify-content: center;
+        align-items: center;
+        font-family: Roboto-Regular;
+        font-size: 1.5rem;
+
+        div {
+            display: inline-block;
+            margin: 0 0.5rem;
+            animation: heartBeat;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    }   
+
+    .menu {
+        height: 40px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        li {
+
+            a{
+                color: #0b6aaa;
+            }
+            display: inline;
+            padding: 10px 10px 10px 10px;
+            margin: 10px 10px 10px 10px;
+            font-family: Roboto-Regular;
+            color: #0b6aaa;
+        }
+    }
+
+    .menuPrincipal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .menuprincipal {
+            padding: 20px;
+            text-align: center;
+
+            li {
+                a {
+                    color: #0b6aaa;
+                }
+                display: inline;
+                padding: 10px;
+                margin: 5px 5px 5px 5px;
+                border: 2px solid #A9D3FF;
+            }
+
+            & :hover {
+
+                border-radius: 5px;
+                background-image: linear-gradient(to left, white, #C4DCE9);
+            }
+        }
+    }
+
+
+}
